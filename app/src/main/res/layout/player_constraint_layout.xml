@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/tv_media_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="Media Title"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <SeekBar
+        android:id="@+id/seekBar_player"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="274dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:max="10"
+        android:progress="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_playpause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Play"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar_player"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="-10"
+        app:layout_constraintEnd_toStartOf="@+id/btn_playpause"
+        app:layout_constraintTop_toTopOf="@+id/btn_playpause" />
+
+    <Button
+        android:id="@+id/btn_forward10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="+10"
+        app:layout_constraintStart_toEndOf="@+id/btn_playpause"
+        app:layout_constraintTop_toTopOf="@+id/btn_playpause" />
+
+    <TextView
+        android:id="@+id/tv_timePassed"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0:08"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar_player"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar_player"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_timeRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="-4.52"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBar_player"
+        app:layout_constraintTop_toTopOf="@+id/seekBar_player" />
+
+    <Button
+        android:id="@+id/btn_segment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:minWidth="135dp"
+        android:text="@string/segment_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_media_title"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ListView
+        android:id="@+id/lv_segment_record"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_segment"
+        app:layout_constraintTop_toTopOf="@id/btn_segment"
+        app:layout_constraintBottom_toTopOf="@id/btn_playpause"
+     />
+
+</android.support.constraint.ConstraintLayout>

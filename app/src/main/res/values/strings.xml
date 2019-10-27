@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mimi</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Find Media</string>
+    <string name="title_player">Player</string>
+    <string name="player_play">Play</string>
+    <string name="player_pause">Pause</string>
+    <string name="segment_start">Start Segment</string>
+    <string name="segment_end">End Segment</string>
+</resources>
